@@ -443,6 +443,7 @@
   background-size: contain;
   background-position: center;
   background-color: white;
+  margin-top: 20px;
 }
 .cards:hover {
   border: 2px solid orange;
@@ -453,12 +454,13 @@
   margin-top: 40vh;
 }
 .cards2 {
-  background-image: url("https://images.pexels.com/photos/6341527/pexels-photo-6341527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-image: url("./images/portfolio.jpg");
   background-repeat: no-repeat;
   border-radius: 20px;
   height: 40vh;
   background-size: cover;
   background-position: center;
+  margin-top: 20px;
 }
 .cards2:hover {
   border: 2px solid orange;

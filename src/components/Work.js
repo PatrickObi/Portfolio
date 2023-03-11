@@ -14,9 +14,21 @@ import { NavLink } from "react-router-dom";
 
 function Contact() {
   const [show, setShow] = useState(false);
+  const [texts, setTexts] = useState();
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = () => {
+    setShow(true);
+    setTexts(
+      "A full stack web application for company called 'Sparked Innovations'. This project was built using Jquery, HTML, CSS and so on, this project highlights their services and helps establish their brand. The client was exceptionally impressed with the results this project has brought."
+    );
+  };
+  const handleShow2 = () => {
+    setShow(true);
+    setTexts(
+      "Personal portfolio made to showcase my skills and achievements. This web-app was built using React, Html, Css, Email.js and so on. "
+    );
+  };
   return (
     <div className="workPage">
       <Container>
@@ -39,15 +51,30 @@ function Contact() {
               <Modal.Header closeButton>
                 <Modal.Title>Sparked Innovations</Modal.Title>
               </Modal.Header>
-              <Modal.Body>
-                A full stack web application for company called "Sparked
-                Innovations". This project was built using Jquery, HTML, CSS and
-                so on, this project highlights their services and helps
-                establish their brand. The client was exceptionally impressed
-                with the results this project has brought.
-              </Modal.Body>
+              <Modal.Body>{texts}</Modal.Body>
               <Modal.Footer>
                 <a href="https://shop.sparkedinnovations.com/" target="_blank">
+                  <Button>
+                    <CgWebsite style={{ fontSize: "5vh" }} /> Live Project
+                  </Button>
+                </a>
+              </Modal.Footer>
+            </Modal>
+          </Col>
+          <Col md={4}>
+            <div onClick={handleShow2} className="cards2"></div>
+            <Modal
+              size="lg"
+              show={show}
+              onHide={handleClose}
+              className="modall"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title>Patrick's Portfolio</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>{texts}</Modal.Body>
+              <Modal.Footer>
+                <a href="https://patrickobi.com" target="_blank">
                   <Button>
                     <CgWebsite style={{ fontSize: "5vh" }} /> Live Project
                   </Button>
